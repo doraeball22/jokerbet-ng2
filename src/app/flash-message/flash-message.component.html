@@ -1,0 +1,11 @@
+<div
+  *ngIf="flashMessage"
+  class="card-panel red darken-4">
+  <button
+    type="button" class="close" data-dismiss="alert" aria-label="Close"
+    (click)="clearMessage()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  {{ flashMessage.message }}
+  เข้าได้เฉพาะผู้ดูแลระบบ
+</div>

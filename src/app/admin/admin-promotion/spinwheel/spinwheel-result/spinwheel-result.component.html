@@ -1,0 +1,49 @@
+
+<div class="container">
+   <div class="col s12">
+
+      <div class="divider"></div>
+      <div class="section">
+        <h5>รายชื่อผู้โชคดีจากโปรโมชั่นหมุนวงล้อ</h5>
+        <mz-collapsible *ngFor="let userSpinWheelResult of userSpinWheelResults | async"
+        [mode]="'expandable'"
+        [onClose]="closeFunctionCallback"
+        [onOpen]="openFunctionCallback"
+        [popout]="true">
+        <mz-collapsible-item>
+          <mz-collapsible-item-header style="color:black">
+              <i class="material-icons">filter_drama</i>
+              User: {{ userSpinWheelResult.user }}
+              <mz-badge *ngIf="userSpinWheelResult.isProvidePrize"
+              [value]=""
+              [caption]="'มอบรางวัลเรียบร้อย'"
+              [badgeClass]="'green'"
+              [new]="false" >
+              </mz-badge>
+
+              <mz-badge *ngIf="!userSpinWheelResult.isProvidePrize"
+              [value]=""
+              [caption]="'รอมอบรางวัล'"
+              [badgeClass]="'orange'"
+              [new]="false">
+              </mz-badge>
+          </mz-collapsible-item-header>
+          <mz-collapsible-item-body>
+              <p>ชื่อผู้เล่น: {{ userSpinWheelResult.user }}</p>
+              <p>คูปอง: {{ userSpinWheelResult.coupon.couponCode }}</p>
+              <p>รางวัล: {{ userSpinWheelResult.result.prize }}</p>
+              <button class="btn waves-effect waves-light" 
+              type="button" 
+              name="action" 
+              (click)="onProvidePrize(userSpinWheelResult)">มอบรางวัล
+                <i class="material-icons right">send</i>
+              </button>
+          </mz-collapsible-item-body>
+        </mz-collapsible-item>
+        </mz-collapsible>
+      </div>
+
+   </div>
+</div>
+
+

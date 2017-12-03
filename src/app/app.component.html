@@ -1,0 +1,9 @@
+<app-header *ngIf="(isLoggedIn | async)"
+[isLoggedIn]="isLoggedIn"
+(logout)="logout()">
+</app-header>
+<!-- Page Content goes here -->
+<router-outlet></router-outlet>
+
+
+

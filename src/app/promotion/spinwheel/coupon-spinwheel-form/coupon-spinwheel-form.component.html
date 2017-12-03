@@ -1,0 +1,65 @@
+<!-- <a class="waves-effect waves-light btn" routerLink="/promotions/spinwheel">
+    <i class="material-icons left">arrow_back</i>ย้อนกลับ
+</a> -->
+
+<div class="section" *ngIf="validUserCoupon">
+  <div class="container">
+    <a class="waves-effect waves-light btn" (click)="goBack()" style="margin-top: 10px">
+      <i class="material-icons left">arrow_back</i>ย้อนกลับ
+    </a>
+    <div class="row">
+      <app-spinwheel>Loading...</app-spinwheel>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="section" *ngIf="!validUserCoupon">
+  <div class="row">
+    <div class="offset-m4 col m4 offset-m4">
+      <h2 style="font-size: 2.5em">หมุนวงล้อเสี่ยงโชค</h2>
+      <form (ngSubmit)="onSubmit($event)" [formGroup]=form>
+
+        <div class="row">
+          <div class="col s12">
+            <span>WTD</span>
+            <mz-input-container inline="true">
+              <input mz-input [label]="'ชื่อ/User (ที่ใช้เข้าเล่น)'" id="gameUsername" placeholder="" type="text" formControlName="gameUsername">
+            </mz-input-container>
+            <span>P</span>
+            <div class="card-panel grey darken-4" *ngIf="formErrors.gameUsername">{{ formErrors.gameUsername }}</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s12">
+            <span>WTD</span>
+            <mz-input-container inline="true">
+              <input mz-input [label]="'ยืนยัน ชื่อ/User(ที่ใช้เข้าเล่น)'" id="confirmGameUsername" placeholder="" type="text" formControlName="confirmGameUsername">
+            </mz-input-container>
+            <span>P</span>
+            <div class="card-panel grey darken-4" *ngIf="form.controls.confirmGameUsername.errors?.MatchPassword">{{ formErrors.confirmGameUsername }}</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s12">
+            <mz-input-container>
+              <i mz-icon-mdi mz-input-prefix [icon]="'gift'">
+              </i>
+              <input mz-input [label]="'คูปอง (Coupon code)'" id="couponCode" type="text" formControlName="couponCode">
+            </mz-input-container>
+            <div class="card-panel grey darken-4" *ngIf="formErrors.couponCode">{{ formErrors.couponCode }}</div>
+          </div>
+        </div>
+
+
+        <button class="btn waves-effect" type="submit" name="action" [disabled]="!form.valid">{{ submitBtnTxt }}
+          <i class="material-icons right">send</i>
+        </button>
+
+      </form>
+    </div>
+  </div>
+</div>

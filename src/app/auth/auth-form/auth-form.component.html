@@ -1,0 +1,45 @@
+<div class="row">
+<form  class="offset-m4 col m4 offset-m4"
+  (ngSubmit)="$event.preventDefault(); onSubmit(authForm.value); authForm.reset();"
+  #authForm="ngForm">
+  <h2 class='text-center'>{{ formName }}</h2>
+  <hr />
+  <div class='form-group'>
+    <label html='email'>Email address</label>
+    <input
+      type='email'
+      class='form-control'
+      id='email'
+      name='email'
+      placeholder='Enter email'
+      ngModel
+      required />
+  </div>
+  <div class='form-group'>
+    <label html='username'>Username</label>
+    <input
+      type='text'
+      class='form-control'
+      id='username'
+      name='username'
+      placeholder='Enter username'
+      ngModel
+      required />
+  </div>
+  <div class='form-group'>
+    <label html='password'>Password</label>
+    <input
+      type='password'
+      class='form-control'
+      id='password'
+      name='password'
+      placeholder='Enter password'
+      ngModel
+      required />
+  </div>
+  <button
+    type='submit'
+    class='btn btn-primary'
+    [disabled]="!authForm.form.valid">{{ formName }}</button>
+</form>
+</div>

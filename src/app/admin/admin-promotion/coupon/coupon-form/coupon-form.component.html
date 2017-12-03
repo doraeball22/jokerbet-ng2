@@ -1,0 +1,96 @@
+<div class="col s12">
+  <div class="section">
+    <div class="row">
+      <form class="col s12 m6" (ngSubmit)="onSubmit($event)" [formGroup]=form>
+        <h2>สร้างคูปอง</h2>
+        <div class="row">
+          <div class="input-field col s6 ">
+            <!-- <i class="material-icons prefix">title</i>
+          <input id="prefix" type="text"  formControlName="prefix">
+          <label for="icon_prefix">Prefix</label> -->
+            <mz-input-container>
+              <i mz-icon-mdi mz-input-prefix [icon]="'title'">
+              </i>
+              <input mz-input [label]="'Prefix'" [validate]="false" id="prefix" type="text" formControlName="prefix">
+            </mz-input-container>
+            <div class="card-panel teal lighten-2" *ngIf="formErrors.prefix">{{ formErrors.prefix }}</div>
+          </div>
+
+
+
+          <div class="input-field col s6 ">
+            <!-- <i class="material-icons prefix">title</i>
+          <input id="postfix" type="text" formControlName="postfix">
+          <label for="icon_prefix">Postfix</label> -->
+            <mz-input-container>
+              <i mz-icon-mdi mz-input-prefix [icon]="'title'">
+              </i>
+              <input mz-input [label]="'Postfix'" [validate]="false" id="Postfix" type="text" formControlName="postfix">
+            </mz-input-container>
+            <div class="card-panel teal lighten-2" *ngIf="formErrors.postfix">{{ formErrors.postfix }}</div>
+          </div>
+
+          <div class="input-field col s6">
+            <!-- <i class="material-icons prefix">picture_as_pdf</i>
+          <input id="icon_prefix" type="number"  formControlName="length">
+          <label for="icon_prefix">Length</label> -->
+            <mz-input-container>
+              <i mz-icon-mdi mz-input-prefix [icon]="'title'">
+              </i>
+              <input mz-input [label]="'Length'" [validate]="false" id="length" type="number" formControlName="length">
+            </mz-input-container>
+            <div class="card-panel teal lighten-2" *ngIf="formErrors.length">{{ formErrors.length }}</div>
+          </div>
+
+          <div class="input-field col s6">
+            <!-- <i class="material-icons prefix">picture_as_pdf</i>
+          <input id="icon_prefix" type="number"  formControlName="count">
+          <label for="icon_prefix">Count</label> -->
+            <mz-input-container>
+              <i mz-icon-mdi mz-input-prefix [icon]="'title'">
+              </i>
+              <input mz-input [label]="'Count'" [validate]="false" id="count" type="number" formControlName="count">
+            </mz-input-container>
+            <div class="card-panel teal lighten-2" *ngIf="formErrors.count">{{ formErrors.count }}</div>
+          </div>
+        </div>
+        
+        <button class="btn waves-effect waves-light" type="submit" name="action">{{ submitBtnTxt }}
+          <i class="material-icons right">send</i>
+        </button>
+
+      </form>
+
+      <div class="col s12 m6">
+        <h2>คูปองใหม่</h2>
+        <ol *ngIf="coupons">
+          <li *ngFor="let coupon of coupons | async ">{{ coupon.couponCode }}</li>
+        </ol>
+      </div>
+
+    </div>
+
+    <div class="col s6">
+      <pre>
+        ความหมาย
+        prefix: คำต่อหน้าคูปอง
+        postfix: คำต่อท้ายคูปอง
+        length: จำนวนตัวอักษรของคูปอง
+        count: จำนวนของคูปอง ที่ต้องการสร้างให้ลูกค้า
+        
+        ตัวอย่าง
+        
+        กรณีต้องการเพิ่มคำข้างหน้า และต่อท้ายคูปอง (ไม่ต้องใส่ prefix และ postfix ก็ได้)
+        prefix: "promo-",
+        postfix: "-2017"
+        ผลลัพธ์: ["promo-WZ4x1t3U-2017"]
+        
+        length: 8,
+        count: 5
+        ผลลัพธ์: ["FR6bwx1q", "ByamOdWV", "7roFwfQs", "rmWlwvll", "pgih5eAB"]
+        </pre>
+
+    </div>
+
+
+  </div>

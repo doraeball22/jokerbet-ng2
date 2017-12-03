@@ -1,0 +1,65 @@
+<nav>
+  <div class="nav-wrapper">
+    <a routerLink="" class="brand-logo center"><img src="../../assets/img/jokerbet/jokerbet-logo.png" alt="jokerbet.net logo" style="height: 100px"></a>
+    <ul class="left hide-on-med-and-down">
+      <li *ngIf="!(isLoggedIn | async)">
+        <a routerLink="/sign-in">Login</a>
+      </li>
+      <li>
+        <a *ngIf="!(isLoggedIn | async)" routerLink="/sign-up">Register</a>
+      </li>
+
+      <li>
+        <a class="waves-effect waves-light btn" *ngIf="isLoggedIn | async" (click)="onLogout()">Logout</a>
+      </li>
+      <li>
+        <a routerLink="admin/promotions/spinwheel">รายชื่อผู้โชคดีหมุนวงล้อ</a>
+      </li>
+      <li>
+        <a routerLink="admin/promotions/coupons/new">สร้างคูปอง</a>
+      </li>
+      <li>
+          <a routerLink="promotions/spinwheel">หมุนวงล้อ</a>
+      </li>
+    </ul>
+
+    <a href="#" data-activates="mobile-demo" class="button-collapse right" [id]="'btn-sidenav-demo'">
+      <i class="material-icons">menu</i>
+    </a>
+  </div>
+</nav>
+
+
+<mz-sidenav [id]="'sidenav-demo'" [collapseButtonId]="'btn-sidenav-demo'">
+  <mz-sidenav-header>
+      <a routerLink="" class="brand-logo center"><img src="../../assets/img/jokerbet/jokerbet-logo.png" alt="jokerbet.net logo" style="height: 100px"></a>
+  </mz-sidenav-header>
+  <mz-sidenav-subheader>Admin Dashboard</mz-sidenav-subheader>
+  <mz-sidenav-divider></mz-sidenav-divider>
+  <mz-sidenav-link>
+    <a routerLink="admin/promotions/spinwheel">รายชื่อผู้โชคดีหมุนวงล้อ</a>
+  </mz-sidenav-link>
+  <mz-sidenav-divider></mz-sidenav-divider>
+  <mz-sidenav-link>
+      <a routerLink="admin/promotions/coupons/new">สร้างคูปอง</a>
+  </mz-sidenav-link>
+  <mz-sidenav-divider></mz-sidenav-divider>
+  <mz-sidenav-link>
+      <a routerLink="promotions/spinwheel">หมุนวงล้อ</a>
+  </mz-sidenav-link>
+  <mz-sidenav-divider></mz-sidenav-divider>
+  <mz-sidenav-link>
+      <li *ngIf="!(isLoggedIn | async)">
+          <a routerLink="/sign-in">Login</a>
+        </li>
+        <li>
+          <a *ngIf="!(isLoggedIn | async)" routerLink="/sign-up">Register</a>
+        </li>
+  
+        <li>
+          <a class="waves-effect waves-light btn" *ngIf="isLoggedIn | async" (click)="onLogout()">Logout</a>
+        </li>
+  </mz-sidenav-link>
+</mz-sidenav>
+
+<app-flash-message></app-flash-message>
