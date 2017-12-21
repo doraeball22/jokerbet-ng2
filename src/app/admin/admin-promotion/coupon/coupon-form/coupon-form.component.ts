@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ReactiveFormsModule, FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-// import 'rxjs/Rx';
+
 import { Observable } from 'rxjs/Observable';
 import { Subject, BehaviorSubject } from 'rxjs';
 import {
@@ -49,7 +49,8 @@ export class CouponFormComponent implements OnInit {
         prefix: ['jokerbet-', Validators.required],
         postfix: ['-2017', Validators.required],
         length: ['8', Validators.compose([Validators.min(8), Validators.max(15)])],
-        count: ['1', Validators.compose([Validators.min(1), Validators.max(100)])]
+        count: ['1', Validators.compose([Validators.min(1), Validators.max(100)])],
+        amount: ['1', Validators.compose([Validators.min(1), Validators.max(100)])]
       }
     ); 
   }
@@ -75,7 +76,8 @@ export class CouponFormComponent implements OnInit {
     prefix: "",
     postfix: "",
     length: "",
-    count: ""
+    count: "",
+    amount: ""
   }
 
   private validationMessages = {
@@ -90,6 +92,10 @@ export class CouponFormComponent implements OnInit {
       max: "อย่าใส่เกินกว่า 15"
     },
     count: {
+      min: "อย่าใส่ต่ำกว่า 1",
+      max: "อย่าใส่เกินกว่า 100"
+    },
+    amount: {
       min: "อย่าใส่ต่ำกว่า 1",
       max: "อย่าใส่เกินกว่า 100"
     }

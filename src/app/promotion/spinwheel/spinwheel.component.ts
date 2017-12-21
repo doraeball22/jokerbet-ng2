@@ -19,17 +19,17 @@ export class SpinwheelComponent implements OnInit {
     
     "segmentValuesArray" : [
       {"probability":0, "type": "image", "value": "../../../assets/spinwheel/img/motorcycle.png", "win": true, "resultText": "คุณได้รับมอเตอร์ไซต์", "userData": {"score":0, "prize":"มอเตอร์ไซค์"}},
-      {"probability":20, "type": "string", "value": "฿10", "win": true, "resultText": "คุณได้รับเครดิต 10 บาท", "userData": {"score":20, "prize":"เครดิต 10 บาท"}},
-      {"probability":0.01, "type": "image", "value": "../../../assets/spinwheel/img/iphone-8.png", "win": true, "resultText": "คุณได้รับ iPhone", "userData": {"score":0.01, "prize":"iPhone"}},
-      {"probability":20, "type": "string", "value": "โชคไม่ดี", "win": false, "resultText": "โชคไม่ดีเลย!!", "userData": {"score":-1, "prize":"โชคไม่ดี"}},
-      {"probability":0.02, "type": "image", "value": "../../../assets/spinwheel/img/gold-necklace.png", "win": true, "resultText": "คุณได้รับทองคำ 25 สตางค์", "userData": {"score":0.02, "prize":"ทองคำ 25 สตางค์"}},
-      {"probability":10, "type": "string", "value": "฿50", "win": true, "resultText": "คุณได้รับเครดิต 50 บาท", "userData": {"score":10, "prize":"เครดิต 50 บาท"}},
-      {"probability":20, "type": "string", "value": "โชคไม่ดี", "win": false, "resultText": "โชคไม่ดีเลย!!", "userData": {"score":-1, "prize":"โชคไม่ดี"}},     
-      {"probability":4, "type": "image", "value": "../../../assets/spinwheel/img/ticket-movie.png", "win": true, "resultText": "คุณได้รับตั๋วหนัง", "userData": {"score":4, "prize":"ตั๋วหนัง"}},
-      {"probability":4, "type": "string", "value": "฿100", "win": true, "resultText": "คุณได้รับเครดิต 100 บาท", "userData": {"score":4, "prize":"เครดิต 100 บาท"}},
-      {"probability":0.02, "type": "image", "value": "../../../assets/spinwheel/img/ticket-tour.png", "win": true, "resultText": "แพคเกจทัวร์เกาหลี 2 ที่นั่ง", "userData": {"score":0.2, "prize":"แพคเกจทัวร์เกาหลี 2 ที่นั่ง"}},
-      {"probability":1.95, "type": "string", "value": "฿200", "win": true, "resultText": "คุณได้รับเครดิต 200 บาท", "userData": {"score":1.95, "prize":"เครดิต 200 บาท"}},
-      {"probability":20, "type": "string", "value": "โชคไม่ดี", "win": false, "resultText": "โชคไม่ดีเลย!!", "userData": {"score":-1, "prize":"โชคไม่ดี"}}      
+      {"probability":5, "type": "string", "value": "฿10", "win": true, "resultText": "คุณได้รับเครดิต 10 บาท", "userData": {"score":20, "prize":"เครดิต 10 บาท"}},
+      {"probability":0, "type": "image", "value": "../../../assets/spinwheel/img/iphone-8.png", "win": true, "resultText": "คุณได้รับ iPhone", "userData": {"score":0.01, "prize":"iPhone"}},
+      {"probability":30, "type": "string", "value": "โชคไม่ดี", "win": false, "resultText": "โชคไม่ดีเลย!!", "userData": {"score":-1, "prize":"โชคไม่ดี"}},
+      {"probability":0, "type": "image", "value": "../../../assets/spinwheel/img/gold-necklace.png", "win": true, "resultText": "คุณได้รับทองคำ 25 สตางค์", "userData": {"score":0.02, "prize":"ทองคำ 25 สตางค์"}},
+      {"probability":3, "type": "string", "value": "฿50", "win": true, "resultText": "คุณได้รับเครดิต 50 บาท", "userData": {"score":10, "prize":"เครดิต 50 บาท"}},
+      {"probability":30, "type": "string", "value": "โชคไม่ดี", "win": false, "resultText": "โชคไม่ดีเลย!!", "userData": {"score":-1, "prize":"โชคไม่ดี"}},     
+      {"probability":0, "type": "image", "value": "../../../assets/spinwheel/img/ticket-movie.png", "win": true, "resultText": "คุณได้รับตั๋วหนัง", "userData": {"score":4, "prize":"ตั๋วหนัง"}},
+      {"probability":1, "type": "string", "value": "฿100", "win": true, "resultText": "คุณได้รับเครดิต 100 บาท", "userData": {"score":4, "prize":"เครดิต 100 บาท"}},
+      {"probability":0, "type": "image", "value": "../../../assets/spinwheel/img/ticket-tour.png", "win": true, "resultText": "แพคเกจทัวร์เกาหลี 2 ที่นั่ง", "userData": {"score":0.2, "prize":"แพคเกจทัวร์เกาหลี 2 ที่นั่ง"}},
+      {"probability":1, "type": "string", "value": "฿200", "win": true, "resultText": "คุณได้รับเครดิต 200 บาท", "userData": {"score":1.95, "prize":"เครดิต 200 บาท"}},
+      {"probability":30, "type": "string", "value": "โชคไม่ดี", "win": false, "resultText": "โชคไม่ดีเลย!!", "userData": {"score":-1, "prize":"โชคไม่ดี"}}      
     ],
     
     "svgWidth": 1024,

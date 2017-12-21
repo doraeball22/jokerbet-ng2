@@ -54,16 +54,25 @@ export class CouponSpinwheelFormComponent implements OnInit {
     this.onValueChanged();
   }
 
+  // private buidForm() {
+  //   this.form = this.formBuilder.group(
+  //     {
+  //       gameUsername: ['', Validators.required],
+  //       // confirmGameUsername: ['', Validators.compose([ Validators.required, confirmUsername() ])],
+  //       confirmGameUsername: ['', Validators.compose([ Validators.required])],
+  //       couponCode: ['', Validators.required],
+  //     },
+  //     {
+  //       validator: ConfirmValidation.MatchPassword 
+  //     }
+  //   ); 
+  // }
   private buidForm() {
     this.form = this.formBuilder.group(
       {
         gameUsername: ['', Validators.required],
-        // confirmGameUsername: ['', Validators.compose([ Validators.required, confirmUsername() ])],
-        confirmGameUsername: ['', Validators.compose([ Validators.required])],
-        couponCode: ['', Validators.required],
-      },
-      {
-        validator: ConfirmValidation.MatchPassword 
+        // confirmGameUsername: ['', Validators.compose([ Validators.required])],
+        couponCode: ['', Validators.required]
       }
     ); 
   }
@@ -87,7 +96,7 @@ export class CouponSpinwheelFormComponent implements OnInit {
 
   formErrors = {
     gameUsername: "",
-    confirmGameUsername: "",
+    // confirmGameUsername: "",
     couponCode: ""
   }
 
@@ -95,10 +104,10 @@ export class CouponSpinwheelFormComponent implements OnInit {
     gameUsername: {
       required: "ใส่ ชื่อ/User (ที่ใช้เข้าเล่น)"
     },
-    confirmGameUsername: {
-      required: "ยืนยัน ชื่อ/User (ที่ใช้เข้าเล่น)",
-      MatchPassword: "ชื่อ user ไม่ตรงกัน"    
-    },
+    // confirmGameUsername: {
+    //   required: "ยืนยัน ชื่อ/User (ที่ใช้เข้าเล่น)",
+    //   MatchPassword: "ชื่อ user ไม่ตรงกัน"    
+    // },
     couponCode: {
       required: "ใส่รหัสคูปองที่คุณได้รับมา จากการเติมเงิน"
     }

@@ -53,6 +53,18 @@
             </mz-input-container>
             <div class="card-panel teal lighten-2" *ngIf="formErrors.count">{{ formErrors.count }}</div>
           </div>
+
+          <div class="input-field col s6">
+            <!-- <i class="material-icons prefix">picture_as_pdf</i>
+          <input id="icon_prefix" type="number"  formControlName="count">
+          <label for="icon_prefix">Count</label> -->
+            <mz-input-container>
+              <i mz-icon-mdi mz-input-prefix [icon]="'title'">
+              </i>
+              <input mz-input [label]="'จำนวนครั้งที่สามารถใช้คูปองนี้ได้'" [validate]="false" id="amount" type="number" formControlName="amount">
+            </mz-input-container>
+            <div class="card-panel teal lighten-2" *ngIf="formErrors.amount">{{ formErrors.amount }}</div>
+          </div>
         </div>
         
         <button class="btn waves-effect waves-light" type="submit" name="action">{{ submitBtnTxt }}
