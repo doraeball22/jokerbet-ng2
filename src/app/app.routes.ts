@@ -48,6 +48,11 @@ export const ROUTES: Routes = [
       ]
     },
 
+    // DELETE this when use in production
+    { path: 'test/spinwheel', 
+      component: SpinwheelComponent
+    },
+
     { path: 'admin',
       component: AdminComponent,
       canActivate: [AuthGuard],
