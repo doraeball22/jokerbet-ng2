@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Location }                 from '@angular/common';
-
 import { SpinwheelService } from './shared/spinwheel.service';
 
 declare var Spin2WinWheel: any; 
@@ -18,16 +17,16 @@ export class SpinwheelComponent implements OnInit {
     "colorArray":[ "#364C62", "#F1C40F", "#E67E22", "#E74C3C", "#673AB7", "#95A5A6", "#16A085", "#27AE60", "#2980B9", "#8E44AD", "#2C3E50", "#F39C12", "#D35400", "#C0392B", "#BDC3C7","#1ABC9C", "#2ECC71", "#E87AC2", "#3498DB", "#9B59B6", "#7F8C8D"],
     
     "segmentValuesArray" : [
-      {"probability":0, "type": "image", "value": "../../../assets/spinwheel/img/motorcycle.png", "win": true, "resultText": "คุณได้รับมอเตอร์ไซต์", "userData": {"score":0, "prize":"มอเตอร์ไซค์"}},
+      { "probability": 0, "type": "string", "value": "$300", "win": true, "resultText": "คุณได้รับเครดิต 300 บาท", "userData": { "score": 0, "prize":"เครดิต 300 บาท"}},
       {"probability":5, "type": "string", "value": "฿10", "win": true, "resultText": "คุณได้รับเครดิต 10 บาท", "userData": {"score":20, "prize":"เครดิต 10 บาท"}},
-      {"probability":0, "type": "image", "value": "../../../assets/spinwheel/img/iphone-8.png", "win": true, "resultText": "คุณได้รับ iPhone", "userData": {"score":0.01, "prize":"iPhone"}},
+      { "probability": 0, "type": "string", "value": "$500", "win": true, "resultText": "คุณได้รับเครดิต 500 บาท", "userData": { "score": 0.01, "prize":"เครดิต 500 บาท"}},
       {"probability":30, "type": "string", "value": "โชคไม่ดี", "win": false, "resultText": "โชคไม่ดีเลย!!", "userData": {"score":-1, "prize":"โชคไม่ดี"}},
-      {"probability":0, "type": "image", "value": "../../../assets/spinwheel/img/gold-necklace.png", "win": true, "resultText": "คุณได้รับทองคำ 25 สตางค์", "userData": {"score":0.02, "prize":"ทองคำ 25 สตางค์"}},
+      { "probability": 0, "type": "string", "value": "$400", "win": true, "resultText": "คุณได้รับเครดิต 400 บาท", "userData": { "score": 0.02, "prize":"เครดิต 400 บาท"}},
       {"probability":3, "type": "string", "value": "฿50", "win": true, "resultText": "คุณได้รับเครดิต 50 บาท", "userData": {"score":10, "prize":"เครดิต 50 บาท"}},
       {"probability":30, "type": "string", "value": "โชคไม่ดี", "win": false, "resultText": "โชคไม่ดีเลย!!", "userData": {"score":-1, "prize":"โชคไม่ดี"}},     
-      {"probability":0, "type": "image", "value": "../../../assets/spinwheel/img/ticket-movie.png", "win": true, "resultText": "คุณได้รับตั๋วหนัง", "userData": {"score":4, "prize":"ตั๋วหนัง"}},
+      { "probability": 0, "type": "string", "value": "$200", "win": true, "resultText": "คุณได้รับเครดิต 200 บาท", "userData": { "score": 4, "prize":"เครดิต 200 บาท"}},
       {"probability":1, "type": "string", "value": "฿100", "win": true, "resultText": "คุณได้รับเครดิต 100 บาท", "userData": {"score":4, "prize":"เครดิต 100 บาท"}},
-      {"probability":0, "type": "image", "value": "../../../assets/spinwheel/img/ticket-tour.png", "win": true, "resultText": "แพคเกจทัวร์เกาหลี 2 ที่นั่ง", "userData": {"score":0.2, "prize":"แพคเกจทัวร์เกาหลี 2 ที่นั่ง"}},
+      { "probability": 0, "type": "string", "value": "฿1000", "win": true, "resultText": "คุณได้รับเครดิต 1000 บาท", "userData": { "score": 0.2, "prize":"เครดิต 1000 บาท"}},
       {"probability":1, "type": "string", "value": "฿200", "win": true, "resultText": "คุณได้รับเครดิต 200 บาท", "userData": {"score":1.95, "prize":"เครดิต 200 บาท"}},
       {"probability":30, "type": "string", "value": "โชคไม่ดี", "win": false, "resultText": "โชคไม่ดีเลย!!", "userData": {"score":-1, "prize":"โชคไม่ดี"}}      
     ],
